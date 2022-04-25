@@ -6,9 +6,7 @@ export const HomeComponent: React.FC = () => {
 
   return (
     <div>
-      <ul>
-      { pokemons.results.map((eachPokemon) => <li>{eachPokemon.name}</li>) }
-      </ul>
+      <p>{pokemons.map(each => each.height)}</p>
     </div>
   );
 }
