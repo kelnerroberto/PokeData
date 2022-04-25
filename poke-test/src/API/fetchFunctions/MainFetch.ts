@@ -1,15 +1,15 @@
-interface ReturnedFromAPI {
+export interface ReturnedFromAPI {
   count: number;
   next: string;
-  previous: string | null;
+  previous: string;
   results: Array<{
     name: string;
     url: string;
   }>;
 }
 
-export const fetchPokemonsForHomePage = async (): Promise<ReturnedFromAPI> => {
-  const apiCall = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=10');
+export const fetchPokemonsForHomePage = async (page: number): Promise<ReturnedFromAPI> => {
+  const apiCall = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${page}&limit=10`);
   const pokemonsJson = await apiCall.json();
   return pokemonsJson;
 }
