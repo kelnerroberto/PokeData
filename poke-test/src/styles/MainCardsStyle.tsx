@@ -29,10 +29,17 @@ export const PokemonTitle = styled.h1`
 
 export const PokemonTypesDiv = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: inline;
+  justify-content: space-around;
 `;
 
-export const PokemonTypesColor = styled.h3`
-  margin: 5px;
-  color: #FFCC00;
+export const PokemonTypesColor = styled.div`
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+`;
+
+export const TypeText = styled.span`
+  font-size: 1rem;
 `;

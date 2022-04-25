@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../contexts/AppContext';
-import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv } from '../styles/MainCardsStyle';
+import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 
 export const HomeComponent: React.FC = () => {
   const { pokemons, isLoaded } = useContext(AppContext);
@@ -15,7 +15,7 @@ export const HomeComponent: React.FC = () => {
         </PokemonTitle>
         <PokemonImage src={each.sprites.front_default} alt={`That's ${each.name} overthere`} />
         <PokemonTypesDiv>{each.types
-          .map((eachType) => <PokemonTypesColor>{eachType.type.name}</PokemonTypesColor>)}
+          .map((eachType) => <PokemonTypesColor><TypeText>{eachType.type.name}</TypeText></PokemonTypesColor>)}
         </PokemonTypesDiv>
       </Card>)}
     </MainDiv>
