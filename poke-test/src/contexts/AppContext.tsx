@@ -16,11 +16,23 @@ const initialState = {
   order: 0,
   past_types: [{}],
   species: {},
-  sprites: {},
+  sprites: {
+    front_default: '',
+  },
   stats: [{}],
-  types: [{}],
+  types: [
+    {
+      slot: 0,
+      type: {
+        name: '',
+        url: '',
+      },
+    }
+  ],
   weight: 0,  
-}]
+}],
+ isLoaded: false,
+ offSetPage: 0,
 };
 
 export const AppContext = createContext(initialState);

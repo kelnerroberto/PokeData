@@ -1,3 +1,18 @@
+
+interface PokeNameAndUrl {
+  name: string,
+  url: string,
+}
+
+interface Sprites {
+  front_default: string,
+}
+
+interface Types {
+  slot: number,
+  type: PokeNameAndUrl,
+}
+
 export interface ReturnedFromAPI {
   abilities: Array<object>,
   base_experience: number,
@@ -13,15 +28,10 @@ export interface ReturnedFromAPI {
   order: number,
   past_types: Array<object>,
   species: object,
-  sprites: object,
+  sprites: Sprites,
   stats: Array<object>,
-  types: Array<object>,
+  types: Array<Types>,
   weight: number,
-}
-
-interface PokeNameAndUrl {
-  name: string,
-  url: string,
 }
 
 export const fetchPokemonsForHomePage = async (page: number): Promise<ReturnedFromAPI[]> => {

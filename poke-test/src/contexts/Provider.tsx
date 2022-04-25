@@ -6,6 +6,10 @@ type PokemonContextProps = {
   children: ReactNode,
 }
 
+interface Sprites {
+  front_default: string,
+}
+
 const pokemonsInitialState = [{
   abilities: [],
   base_experience: 0,
@@ -21,23 +25,35 @@ const pokemonsInitialState = [{
   order: 0,
   past_types: [],
   species: {},
-  sprites: {},
+  sprites: {
+    front_default: '',
+  },
   stats: [],
-  types: [],
+  types: [
+    {
+      slot: 0,
+      type: {
+        name: '',
+        url: '',
+      },
+    }
+  ],
   weight: 0,  
 }];
 
 export const PokemonProvider = ({ children }: PokemonContextProps) => {
   const [offSetPage, setOffSetPage] = useState(0);
   const [pokemons, setPokemons] = useState<ReturnedFromAPI[]>(pokemonsInitialState);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const takeInitialPokemons = async () => setPokemons(await fetchPokemonsForHomePage(offSetPage));
     takeInitialPokemons();
+    setIsLoaded(true);
   }, []);
 
   return( 
-  <AppContext.Provider value={ { pokemons } }>
+  <AppContext.Provider value={ { pokemons, isLoaded, offSetPage } }>
     {children}
   </AppContext.Provider> )
 };
