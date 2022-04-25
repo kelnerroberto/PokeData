@@ -35,14 +35,25 @@ export interface ReturnedFromAPI {
 }
 
 export const fetchPokemonsForHomePage = async (page: number): Promise<ReturnedFromAPI[]> => {
+  // faz o fetch da API com limite de 10 pokemons, a partir da numeração da pagina, começando do 0.
   const apiCall = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${page}&limit=10`);
+  // pega a resposta da chamada da api para resolver
   const pokemonsJson = await apiCall.json();
+  // utiliza o resultado acima para mapear e retornar um array com todos os urls listados na chamada da api
   const pokesUrl = pokemonsJson.results.map((eachPoke: PokeNameAndUrl)  => eachPoke.url);
+  // utiliza o método Promise.all para resolver todas as requisições que serão feitas com o array criado acima.
   const pokesDetails = Promise.all(pokesUrl
     .map(async (eachUrl: string) => await fetch(eachUrl)
     .then(json => json.json())
     .then(result => result)
-    ))
+    ));
+  // como acima retorna uma promise, criei uma variável para esperar e armazenar o resultado e em seguida retornar um array com os dados detalhados de todos os pokemons listados na chamada da api.
   const detailedPokemons = await pokesDetails;
   return detailedPokemons;
+}
+
+export const fetchDetailedPokemons = async (name: string | undefined): Promise<ReturnedFromAPI> => {
+  const apiCall = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  const pokemonsJson = await apiCall.json();
+  return pokemonsJson;
 }
