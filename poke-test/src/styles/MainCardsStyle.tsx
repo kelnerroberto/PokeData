@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
+export const PokemonImage = styled.img`
+  object-fit: cover;
+  max-width: 80px;
+`
+
 export const MainDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 `
 
 export const Card = styled.div`
@@ -11,7 +16,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #0A285F;
-  width: 15%;
+  width: 230px;
   align-items: center;
   padding: 1rem;
   border-radius: 0.5rem;
