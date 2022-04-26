@@ -4,8 +4,15 @@ interface PokeNameAndUrl {
   url: string,
 }
 
+interface SpritesOther {
+  home: {
+    front_default: string,
+  }
+}
+
 interface Sprites {
   front_default: string,
+  other: SpritesOther,
 }
 
 interface Types {
