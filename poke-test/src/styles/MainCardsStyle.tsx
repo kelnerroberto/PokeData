@@ -22,7 +22,7 @@ export const Card = styled.div`
   cursor: pointer;
 
   &:hover {
-    
+    box-shadow: inset 0 0 0.8em #c29b00, 0 0 0.8em #fdd430;
   }
 `;
 
@@ -39,9 +39,11 @@ export const PokemonTypesDiv = styled.div`
 `;
 
 export const PokemonTypesColor = styled.div`
-  background-color: #fff;
   padding: 0.4rem;
   border-radius: 0.5rem;
+  &:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const TypeText = styled.span`
