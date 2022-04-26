@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
   display: flex;
-  height: 4rem;
+  height: 5rem;
   justify-content: space-between;
   align-content: center;
-  background-image: linear-gradient(120deg, #CC0000, #FF0000, #FFDE00, #B3A125);
+  background-image: #0A285F;
   align-items: center;
   flex-wrap: wrap;
+  transition: all 0.4s;
 `;
 
 export const SearchInput = styled.input`
@@ -16,7 +17,7 @@ export const SearchInput = styled.input`
   outline: none;
   border: 1px solid transparent;
   &:focus {
-  border-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
   }
 `;
 
@@ -39,6 +40,6 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: inline;
   background-color: #FFDE00;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 5px;
 `

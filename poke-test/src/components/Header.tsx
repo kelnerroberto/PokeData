@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InputContainer, SearchButton, SearchContainer, SearchInput } from "../styles/HeaderStyle";
 import { AiOutlineSearch } from 'react-icons/ai'
