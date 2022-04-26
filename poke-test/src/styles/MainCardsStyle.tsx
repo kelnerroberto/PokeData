@@ -24,7 +24,7 @@ export const Card = styled.div`
 
 export const PokemonTitle = styled.h1`
   flex-wrap: wrap;
-  color: #D5A100;
+  color: rgb(255,255,255);
 `;
 
 export const PokemonTypesDiv = styled.div`

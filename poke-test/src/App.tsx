@@ -3,13 +3,14 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { PokemonProvider } from './contexts/Provider';
 import { DetailedPokemon } from './pages/DetailedPokemon';
 import { Home } from './pages/Home';
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/pokemon/:name' element={ <DetailedPokemon /> } />
-          <Route path='/' element={ <PokemonProvider> <Home /> </PokemonProvider>} />
+        <Route path='/' element={ <PokemonProvider> <Home /> </PokemonProvider>} />
       </Routes>
     </BrowserRouter>
   );
