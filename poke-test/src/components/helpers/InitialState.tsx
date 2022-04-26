@@ -15,6 +15,11 @@ export const InitialDetailedPokemonState = {
   species: {},
   sprites: {
     front_default: '',
+    other: {
+      home: {
+        front_default: '',
+      }
+    }
   },
   stats: [
     {

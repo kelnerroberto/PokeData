@@ -27,6 +27,11 @@ const pokemonsInitialState = [{
   species: {},
   sprites: {
     front_default: '',
+    other: {
+      home: {
+        front_default: '',
+      }
+    }
   },
   stats: [],
   types: [

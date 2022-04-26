@@ -9,6 +9,7 @@ import { StatsAndIcons } from './helpers/IconsOfStats';
 
 import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
+import { DetailedMainDiv, PokemonDetailedImage, PokemonDetailedTitle } from '../styles/DetailedStyle';
 
  
 export const DetailsComponent: React.FC = () => {
@@ -32,30 +33,22 @@ export const DetailsComponent: React.FC = () => {
     loaded ?
     (
     pokemon.name === '' ?
-    <div>
+    <MainDiv>
       <h3>
         Que pena, não encontramos nenhum pokémon com esse nome.
       </h3>
-    </div>
+    </MainDiv>
     :
-    <div>
-      <h2>{`#${pokemon.id}: ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}`}</h2>
+    <DetailedMainDiv>
+      <PokemonDetailedTitle>{`#${pokemon.id}: ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}`}</PokemonDetailedTitle>
       <MainDiv>
-          <Card 
-          key={`${pokemon.id}`}
-          style={{ background: takeTypeToChangeBackGround(pokemon.types[0].type.name)}}
-          >
-            <PokemonTitle>
-              {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-            </PokemonTitle>
-            <PokemonImage src={pokemon.sprites.front_default} alt={`That's ${pokemon.name} overthere`} />
+            <PokemonDetailedImage src={pokemon.sprites.other.home.front_default} alt={`That's ${pokemon.name} overthere`} />
             <PokemonTypesDiv>{
             pokemon.types.map((pokemonType) => <PokemonTypesColor>
                 <TypeText>{pokemonType.type.name}</TypeText>
                 </PokemonTypesColor>
                 )}
             </PokemonTypesDiv>
-          </Card>
       </MainDiv>
       <section>
         <div>
@@ -80,7 +73,7 @@ export const DetailsComponent: React.FC = () => {
           </MainDiv>
         </div>
       </section>
-    </div>
+    </DetailedMainDiv>
     )
     :
     <p>Carregando...</p>
