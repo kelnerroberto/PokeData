@@ -4,7 +4,9 @@ import { fetchDetailedPokemons, ReturnedFromAPI } from '../API/fetchFunctions/Ma
 import { InitialDetailedPokemonState } from './helpers/InitialState';
 import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { backGroundImage } from './helpers/BackGroundType';
-
+import { GiBodyHeight, GiWeight } from 'react-icons/gi';
+import { StatsAndIcons } from './helpers/IconsOfStats';
+ 
 export const DetailsComponent: React.FC = () => {
   const { name } = useParams();
   const detailedPokemon = async (pokeName: string | undefined) => await fetchDetailedPokemons(pokeName);
@@ -56,10 +58,21 @@ export const DetailsComponent: React.FC = () => {
           Habilidades:
         </div>
         <div>
-          <p>Características físicas do pokémon:</p>
+          <p><strong>Características físicas do pokémon:</strong></p>
           <MainDiv>
-            <span>Altura: {`${ pokemon.height * 10 }cm`}</span>
-            <span>Peso: { `${ pokemon.weight / 10 }kg` }</span>
+            <span><GiBodyHeight/>{`${ pokemon.height * 10 }cm`}</span>
+            <span><GiWeight/> { `${ pokemon.weight / 10 }kg` }</span>
+          </MainDiv>
+        </div>
+        <div>
+          <p><strong>Status inicial do Pokémon:</strong></p>
+          <MainDiv>
+            <ul style={{ listStyle: 'none' }}>
+              { pokemon
+              .stats.map((each) => 
+              StatsAndIcons(each)
+              )}
+            </ul>
           </MainDiv>
         </div>
       </section>
