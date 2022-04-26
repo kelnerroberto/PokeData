@@ -42,4 +42,4 @@ export const InputContainer = styled.div`
   background-color: #FFDE00;
   padding: 0.7rem;
   border-radius: 5px;
-`
+`;

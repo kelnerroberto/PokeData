@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { fetchDetailedPokemons, ReturnedFromAPI } from '../API/fetchFunctions/MainFetch';
+
 import { InitialDetailedPokemonState } from './helpers/InitialState';
-import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { backGroundImage } from './helpers/BackGroundType';
-import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { StatsAndIcons } from './helpers/IconsOfStats';
+
+import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
+import { GiBodyHeight, GiWeight } from 'react-icons/gi';
+
  
 export const DetailsComponent: React.FC = () => {
   const { name } = useParams();
@@ -35,7 +39,7 @@ export const DetailsComponent: React.FC = () => {
     </div>
     :
     <div>
-      <h2>{`#${pokemon.id}`}</h2>
+      <h2>{`#${pokemon.id}: ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}`}</h2>
       <MainDiv>
           <Card 
           key={`${pokemon.id}`}
