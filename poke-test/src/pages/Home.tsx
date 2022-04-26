@@ -1,10 +1,13 @@
 import React from 'react';
+import { HeaderComponent } from '../components/Header';
 import { HomeComponent } from '../components/HomeComponent';
+import { BodyHomeStyle } from '../styles/MainCardsStyle';
 
 export const Home: React.FC = () => {
   return (
-    <div>
+    <BodyHomeStyle>
+      <HeaderComponent />
       <HomeComponent />
-    </div>
+    </BodyHomeStyle>
   );
 }

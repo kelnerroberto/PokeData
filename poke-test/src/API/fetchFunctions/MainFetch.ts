@@ -13,6 +13,12 @@ interface Types {
   type: PokeNameAndUrl,
 }
 
+export interface Stats {
+  base_stat: number,
+  effort: number,
+  stat: PokeNameAndUrl,
+}
+
 export interface ReturnedFromAPI {
   abilities: Array<object>,
   base_experience: number,
@@ -29,7 +35,7 @@ export interface ReturnedFromAPI {
   past_types: Array<object>,
   species: object,
   sprites: Sprites,
-  stats: Array<object>,
+  stats: Array<Stats>,
   types: Array<Types>,
   weight: number,
 }
