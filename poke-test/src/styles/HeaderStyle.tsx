@@ -39,7 +39,7 @@ export const SearchButton = styled.button`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: inline;
-  background-color: #FFDE00;
+  background-color: #FFDE56;
   padding: 0.7rem;
   border-radius: 5px;
 `;
