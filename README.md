@@ -15,4 +15,4 @@ Mais informações você encontrará no README da pasta `poke-test`.
 Espero que goste e qualquer dúvida estarei a disposição através do email:
  * kelnerroberto@gmail.com\
 
-Ou então poderá me contactar através de qualquer uma das redes sociais especificadas no meu perfil(https://github.com/kelnerroberto) 💻
+Ou então poderá me contactar através de qualquer uma das redes sociais especificadas no meu [perfil](https://github.com/kelnerroberto) 💻
