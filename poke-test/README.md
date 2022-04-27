@@ -24,7 +24,7 @@ Para demonstrar isso aqui vão 3 links que te levarão para a página de detalhe
 
 E ai, qual dos 3 você mais gostou? 😆
 
-Não se esqueça de olhar na **página de detalhes para escolher** o pokémon que você mais se identifica!
+Não se esqueça de olhar na **página de detalhes** para escolher o pokémon que você mais se identifica!
 
 Lá você vai encontrar, além do nome e do tipo do pokémon:
 
