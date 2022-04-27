@@ -16,7 +16,7 @@ Bom, essa é a nossa homepage. Você pode facilmente acessar os detalhes de um p
 
 Você consegue também acessar a página de detalhes diretamente pela URL (lembrando do detalhe da rota '/pokemon/:nome-do-pokemon').
 
-Para demonstrar isso aqui vão 3 links que te levarão para a página de detalhes desses pokémons:
+Para demonstrar isso, aqui vão 3 links que te levarão para a página de detalhes desses pokémons:
 
  * [Bulbasaur](http://localhost:3000/pokemon/bulbasaur) 🌿
  * [Charmander](http://localhost:3000/pokemon/charmander) 🔥
