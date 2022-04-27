@@ -48,7 +48,7 @@ const pokemonsInitialState = [{
 
 export const PokemonProvider = ({ children }: PokemonContextProps) => {
   const [offSetPage, setOffSetPage] = useState(0);
-  const [pokemons, setPokemons] = useState<ReturnedFromAPI[]>(pokemonsInitialState);
+  const [pokemons, setPokemons] = useState<ReturnedFromAPI[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const value = {
@@ -64,6 +64,14 @@ export const PokemonProvider = ({ children }: PokemonContextProps) => {
     takeInitialPokemons();
     setIsLoaded(true);
   }, []);
+
+  useEffect(() => {
+    const takeInitialPokemons = async () => setPokemons([...pokemons,
+      ...await fetchPokemonsForHomePage(offSetPage)
+    ]);
+    takeInitialPokemons();
+    setIsLoaded(true);
+  }, [offSetPage]);
 
   return( 
   <AppContext.Provider value={ value }>

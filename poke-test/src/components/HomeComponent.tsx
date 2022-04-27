@@ -21,11 +21,22 @@ export const HomeComponent: React.FC = () => {
     return `url(${bgUrl})`;
   };
 
+  const handleScroll = () => {
+    if(window.innerHeight + document.documentElement.scrollTop < 
+      document.documentElement.offsetHeight) {
+        return ;
+      }
+    setTotalPages(totalPages + 10);
+  };
+
   useEffect(() => {
-    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handlesScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  useEffect(() => {
+    setOffSetPage(totalPages);
+  }, [totalPages])
 
   return (
     isLoaded ? 
@@ -41,7 +52,9 @@ export const HomeComponent: React.FC = () => {
         <PokemonImage src={each.sprites.front_default} alt={`That's ${each.name} overthere`} />
         <PokemonTypesDiv>{each.types
           .map((eachType) => 
-          <PokemonTypesColor style={{ backgroundColor: ColoredTypeBackGround(eachType.type.name)}}>
+          <PokemonTypesColor 
+          style={{ backgroundColor: ColoredTypeBackGround(eachType.type.name)}}
+          key={eachType.type.name}>
             <TypeText>{eachType.type.name}</TypeText>
             </PokemonTypesColor>)}
         </PokemonTypesDiv>
