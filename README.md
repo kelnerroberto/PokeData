@@ -8,6 +8,8 @@ Para iniciar o projeto e começar a sua jornada basta clonar o repositório (rec
 
 ## Pronto! O projeto está rodando.
 
+Por padrão, o projeto será aberto em seu browser na porta localhost:3000.
+
 Mais informações você encontrará no README da pasta `poke-test`.
 
 Espero que goste e qualquer dúvida estarei a disposição através dos contatos especificados no meu perfil. :computer:
