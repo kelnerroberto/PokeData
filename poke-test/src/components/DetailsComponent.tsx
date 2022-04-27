@@ -8,7 +8,7 @@ import { StatsAndIcons } from './helpers/IconsOfStats';
 
 import { MainDiv, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
-import { DetailedMainDiv, DetailsPokemonWord, PokemonDetailedImage, PokemonDetailedTitle, SectionsDivs } from '../styles/DetailedStyle';
+import { AbilitiesAndMovesDiv, AbilitiesDiv, CardSection, DetailedMainDiv, DetailedSection, DetailsPokemonWord, DivList, MovesDiv, PhysicalCharacteristics, PokemonDetailedImage, PokemonDetailedTitle, SectionsDivs } from '../styles/DetailedStyle';
 import { ColoredTypeBackGround } from './helpers/TypeBackGround';
 import { UpperCaseFirstLetter } from './helpers/UpperCaseFirstLetter';
 
@@ -43,6 +43,7 @@ export const DetailsComponent: React.FC = () => {
     </MainDiv>
     :
     <DetailedMainDiv>
+      <CardSection>
       <PokemonDetailedTitle>{`#${pokemon.id}: ${UpperCaseFirstLetter(pokemon.name)}`}</PokemonDetailedTitle>
       <MainDiv>
             <PokemonDetailedImage src={pokemon.sprites.other.home.front_default} alt={`That's ${pokemon.name} overthere`} />
@@ -54,49 +55,53 @@ export const DetailsComponent: React.FC = () => {
                 )}
             </PokemonTypesDiv>
       </MainDiv>
-      <section>
-        <SectionsDivs>
-         <DetailsPokemonWord>
+      </CardSection>
+      <DetailedSection>
+        <AbilitiesAndMovesDiv>
+          <AbilitiesDiv>
+            <DetailsPokemonWord>
             Habilidades:
-          </DetailsPokemonWord>
-          <MainDiv>
-            <ul style={{ listStyle: 'inherit' }}>
-              { pokemon.abilities
-                .map(eachPokemonAb => <li>{UpperCaseFirstLetter(eachPokemonAb.ability.name)}</li>)
-              }
-            </ul>
-          </MainDiv>
-        </SectionsDivs>
-        <SectionsDivs>
-         <DetailsPokemonWord>
-            Movimentos possíveis:
-          </DetailsPokemonWord>
-          <MainDiv>
-            <ol>
-              { slicePokemonsMoves(pokemon.moves)
-              }
-            </ol>
-          </MainDiv>
-        </SectionsDivs>
+            </DetailsPokemonWord>
+            <DivList>
+              <ul style={{ listStyle: 'none' }}>
+                { pokemon.abilities
+                  .map(eachPokemonAb => <li>{UpperCaseFirstLetter(eachPokemonAb.ability.name)}</li>)
+                }
+              </ul>
+            </DivList>
+          </AbilitiesDiv>
+          <MovesDiv>
+            <DetailsPokemonWord>
+              Movimentos possíveis:
+            </DetailsPokemonWord>
+            <DivList>
+              <ol style={{ listStyle: 'none' }}>
+                { 
+                slicePokemonsMoves(pokemon.moves)
+                }
+              </ol>
+            </DivList>
+          </MovesDiv>
+        </AbilitiesAndMovesDiv>
         <SectionsDivs>
           <DetailsPokemonWord>Características físicas do pokémon:</DetailsPokemonWord>
-          <MainDiv>
+          <PhysicalCharacteristics>
             <span><GiBodyHeight/>{`${ pokemon.height * 10 }cm`}</span>
             <span><GiWeight/> { `${ pokemon.weight / 10 }kg` }</span>
-          </MainDiv>
+          </PhysicalCharacteristics>
         </SectionsDivs>
         <SectionsDivs>
           <DetailsPokemonWord>Status inicial do Pokémon:</DetailsPokemonWord>
-          <MainDiv>
+          <DivList>
             <ul style={{ listStyle: 'none' }}>
               { pokemon
               .stats.map((each) => 
               StatsAndIcons(each)
               )}
             </ul>
-          </MainDiv>
+          </DivList>
         </SectionsDivs>
-      </section>
+      </DetailedSection>
     </DetailedMainDiv>
     )
     :
