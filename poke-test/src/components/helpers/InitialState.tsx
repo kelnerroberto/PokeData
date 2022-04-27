@@ -1,5 +1,12 @@
 export const InitialDetailedPokemonState = {
-  abilities: [],
+  abilities: [{
+    ability: {
+    name: "",
+    url: ""
+    },
+    is_hidden: false,
+    slot: 0,
+    }],
   base_experience: 0,
   forms: [],
   game_indices: [],

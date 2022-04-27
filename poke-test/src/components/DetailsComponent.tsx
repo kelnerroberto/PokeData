@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { fetchDetailedPokemons, ReturnedFromAPI } from '../API/fetchFunctions/MainFetch';
+import { Abilities, fetchDetailedPokemons, ReturnedFromAPI } from '../API/fetchFunctions/MainFetch';
 
 import { InitialDetailedPokemonState } from './helpers/InitialState';
 import { backGroundImage } from './helpers/BackGroundType';
@@ -11,11 +11,13 @@ import { MainDiv, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { DetailedMainDiv, PokemonDetailedImage, PokemonDetailedTitle } from '../styles/DetailedStyle';
 import { ColoredTypeBackGround } from './helpers/TypeBackGround';
-
+import { UpperCaseFirstLetter } from './helpers/UpperCaseFirstLetter';
  
 export const DetailsComponent: React.FC = () => {
   const { name } = useParams();
+
   const detailedPokemon = async (pokeName: string | undefined) => await fetchDetailedPokemons(pokeName);
+
   const [pokemon, setPokemon] = useState<ReturnedFromAPI>(InitialDetailedPokemonState);
   const [loaded, setLoaded] = useState(false);
 
@@ -24,11 +26,6 @@ export const DetailsComponent: React.FC = () => {
     searchedPokemon();
     setLoaded(true);
   }, []);
-
-  const takeTypeToChangeBackGround = (firstType: any) => {
-    const bgUrl = backGroundImage(firstType);
-    return `url(${bgUrl})`;
-  };
 
   return (
     loaded ?
@@ -41,7 +38,7 @@ export const DetailsComponent: React.FC = () => {
     </MainDiv>
     :
     <DetailedMainDiv>
-      <PokemonDetailedTitle>{`#${pokemon.id}: ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}`}</PokemonDetailedTitle>
+      <PokemonDetailedTitle>{`#${pokemon.id}: ${UpperCaseFirstLetter(pokemon.name)}`}</PokemonDetailedTitle>
       <MainDiv>
             <PokemonDetailedImage src={pokemon.sprites.other.home.front_default} alt={`That's ${pokemon.name} overthere`} />
             <PokemonTypesDiv>{
@@ -54,7 +51,18 @@ export const DetailsComponent: React.FC = () => {
       </MainDiv>
       <section>
         <div>
-          Habilidades:
+         <p>
+            <strong>
+            Habilidades:
+            </strong>
+          </p>
+          <MainDiv>
+            <ul style={{ listStyle: 'inherit' }}>
+              { pokemon.abilities
+                .map(eachPokemonAb => <li>{UpperCaseFirstLetter(eachPokemonAb.ability.name)}</li>)
+              }
+            </ul>
+          </MainDiv>
         </div>
         <div>
           <p><strong>Características físicas do pokémon:</strong></p>
