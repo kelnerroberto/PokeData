@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AppContext } from '../contexts/AppContext';
+import { AppContext, Value } from '../contexts/AppContext';
 import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { backGroundImage } from './helpers/BackGroundType';
 import { ColoredTypeBackGround } from './helpers/TypeBackGround';
 
 export const HomeComponent: React.FC = () => {
-  const { pokemons, isLoaded } = useContext(AppContext);
+  const { pokemons, setPokemons, isLoaded, offSetPage, setOffSetPage } = useContext(AppContext) as Value;
+  const [totalPages, setTotalPages] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
 
@@ -18,6 +20,12 @@ export const HomeComponent: React.FC = () => {
     const bgUrl = backGroundImage(firstType);
     return `url(${bgUrl})`;
   };
+
+  useEffect(() => {
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handlesScroll);
+  }, []);
 
   return (
     isLoaded ? 
