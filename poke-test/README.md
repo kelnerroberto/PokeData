@@ -8,5 +8,5 @@ Pois vamos lá!
 
 Primeiramente, ao rodar no seu terminal o comando `yarn start`, você possivelmente foi direcionado ao [localhost:3000](http://localhost:3000/) . Bom, essa é a nossa homepage, você pode facilmente acessar os detalhes de um pokémon ou clicando no card desse pokémon ou pesquisando na barra de pesquisa no cabeçalho.
 
-<img src="./Images/HomePage.jpeg" alt="My Home" width='100px'/>
+<img src="./Images/HomePage.jpeg" alt="My Home" width='70%'/>
 
