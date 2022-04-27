@@ -12,7 +12,7 @@ export const CardSection = styled.section`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #E5E7E7;
+  background-color: #F0F0F0;
   padding-bottom: 1rem;
 `
 
@@ -31,8 +31,26 @@ export const DetailedSection = styled.section`
   flex-direction: column;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: #E5E7E7;
+  background-color: #F0F0F0;
 `;
+
+export const PokemonDetailedTypesDiv = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: inline;
+  justify-content: space-around;
+  align-content: center;
+  padding-top: 18px;
+`;
+
+export const PokemonDetailedTypesColor = styled.div`
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  &:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+`;
+
 
 export const AbilitiesAndMovesDiv = styled.div`
   display: flex;
@@ -48,8 +66,8 @@ export const AbilitiesAndMovesDiv = styled.div`
 export const AbilitiesDiv = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #96c8fb;
-  background-image: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   padding: 1rem;
   border-radius: 5%;
 `;
@@ -57,8 +75,8 @@ export const AbilitiesDiv = styled.div`
 export const MovesDiv = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #96c8fb;
-  background-image: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   padding: 1rem;
   border-radius: 5%;
 `
@@ -79,16 +97,24 @@ export const SectionsDivs = styled.div`
   display: inline-block;
   align-self: center;
   flex-wrap: wrap;
-  background-color: #96c8fb;
-  background-image: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   margin: 1rem;
   padding: 1rem;
+  border-radius: 5%;
 `
 
 export const PokemonDetailedImage = styled.img`
   object-fit: cover;
   max-width: 250px;
 `;
+
+export const PokemonImageDiv = styled.div`
+  border-radius: 30%;
+  padding: 35px;
+  background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+`
 
 export const BackToHomePageButton = styled.a`
   cursor: pointer;
