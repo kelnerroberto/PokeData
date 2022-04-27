@@ -2,7 +2,7 @@
 
 Se você chegou até aqui, significa que leu o README anterior e conseguiu rodar o projeto em sua máquina local.
 
-Bom, para facilitar sua jornada, vou deixar aqui alguns links para você acessar e verificar os detalhes de alguns pokémons. Lembrando que a rota para a página de detalhes é acessada através de ***`'/pokemon/:nome-do-pokemon'`*** e a home é simplesmente **'/'**.
+Bom, para facilitar sua jornada, vou deixar aqui alguns links para você acessar e verificar os detalhes de alguns pokémons. Lembrando que a rota para a página de detalhes é acessada através de ***`'/pokemon/:nome-do-pokemon'`*** e a home é simplesmente ***`'/'`***.
 
 ### Pois vamos lá!
 
