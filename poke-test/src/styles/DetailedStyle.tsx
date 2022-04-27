@@ -110,7 +110,7 @@ export const PokemonDetailedImage = styled.img`
 `;
 
 export const PokemonImageDiv = styled.div`
-  border-radius: 30%;
+  border-radius: 20%;
   padding: 35px;
   background-color: #000000;
 background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
