@@ -8,8 +8,10 @@ Para iniciar o projeto e começar a sua jornada basta clonar o repositório (rec
 
 ## Pronto! O projeto está rodando.
 
-Por padrão, o projeto será aberto em seu browser na porta localhost:3000.
+Por padrão, o projeto será aberto em seu browser na porta [http://localhost:3000](http://localhost:3000). Caso essa porta esteja em uso, o yarn irá te alertar, perguntando se você não gostaria de rodar o projeto em outra porta. Para isso, basta clicar `y` no terminal que ele irá abrir uma nova porta para rodar este projeto.
 
 Mais informações você encontrará no README da pasta `poke-test`.
 
-Espero que goste e qualquer dúvida estarei a disposição através dos contatos especificados no meu perfil. :computer:
+Espero que goste e qualquer dúvida estarei a disposição através do email:
+ * kelnerroberto@gmail.com. 
+ ou me contactar através de qualquer uma das redes especificadas no meu perfil. :computer:
