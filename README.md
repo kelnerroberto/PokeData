@@ -13,5 +13,5 @@ Por padrão, o projeto será aberto em seu browser na porta [http://localhost:30
 Mais informações você encontrará no README da pasta `poke-test`.
 
 Espero que goste e qualquer dúvida estarei a disposição através do email:
- * kelnerroberto@gmail.com. 
- ou me contactar através de qualquer uma das redes especificadas no meu perfil. :computer:
+ * kelnerroberto@gmail.com
+ou me contactar através de qualquer uma das redes especificadas no meu perfil. :computer:
