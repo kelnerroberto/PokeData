@@ -14,7 +14,7 @@ Por padrão, o projeto será aberto em seu browser na porta [http://localhost:30
 
 ### 1) O projeto possuí 2 rotas, sendo acessível por '/' (home) e '/pokemon/:nome-do-pokemon' (página de detalhes do pokémon), onde nome-do-pokemon pode ser qualquer nome de pokémon válido.
 
-### 2) Atenção: Não existe a rota '/:nome-do-pokemon', para acessar os detalhes do pokémon deve ser acessado '/pokemon/:nome', por exemplo: http://localhost:3000/pokemon/pikachu
+### 2) Atenção: Não existe a rota '/:nome-do-pokemon', para acessar os detalhes do pokémon deve ser acessado com '/pokemon/:nome', por exemplo: http://localhost:3000/pokemon/pikachu
 
 _________________________________________________________________________________________
 
