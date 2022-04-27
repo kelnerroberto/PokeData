@@ -26,8 +26,14 @@ export interface Stats {
   stat: PokeNameAndUrl,
 }
 
+export interface Abilities {
+  ability: PokeNameAndUrl,
+  is_hidden: boolean,
+  slot: number,
+}
+
 export interface ReturnedFromAPI {
-  abilities: Array<object>,
+  abilities: Array<Abilities>,
   base_experience: number,
   forms: Array<object>,
   game_indices: Array<object>,

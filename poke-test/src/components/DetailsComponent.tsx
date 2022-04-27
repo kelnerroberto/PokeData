@@ -7,7 +7,7 @@ import { InitialDetailedPokemonState } from './helpers/InitialState';
 import { backGroundImage } from './helpers/BackGroundType';
 import { StatsAndIcons } from './helpers/IconsOfStats';
 
-import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
+import { MainDiv, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { DetailedMainDiv, PokemonDetailedImage, PokemonDetailedTitle } from '../styles/DetailedStyle';
 import { ColoredTypeBackGround } from './helpers/TypeBackGround';
