@@ -26,7 +26,9 @@ export const HeaderComponent: React.FC = () => {
         <SearchInput
           type='text'
           onChange={(event) => handleSearchChange(event)}
-          placeholder="Search your pokemon"
+          placeholder="Procure por um pokémon..."
+          onFocus={(event) => event.target.placeholder = "" }
+          onBlur={(event) => event.target.placeholder = "Procure por um pokémon..."}
         />
         <SearchButton type="button" onClick={() => handleClick()}>
           <AiOutlineSearch />

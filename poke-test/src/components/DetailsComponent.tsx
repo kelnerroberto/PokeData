@@ -10,6 +10,7 @@ import { StatsAndIcons } from './helpers/IconsOfStats';
 import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { DetailedMainDiv, PokemonDetailedImage, PokemonDetailedTitle } from '../styles/DetailedStyle';
+import { ColoredTypeBackGround } from './helpers/TypeBackGround';
 
  
 export const DetailsComponent: React.FC = () => {
@@ -44,9 +45,10 @@ export const DetailsComponent: React.FC = () => {
       <MainDiv>
             <PokemonDetailedImage src={pokemon.sprites.other.home.front_default} alt={`That's ${pokemon.name} overthere`} />
             <PokemonTypesDiv>{
-            pokemon.types.map((pokemonType) => <PokemonTypesColor>
-                <TypeText>{pokemonType.type.name}</TypeText>
-                </PokemonTypesColor>
+            pokemon.types.map((pokemonType) => 
+            <PokemonTypesColor style={{ backgroundColor: ColoredTypeBackGround(pokemonType.type.name)}}>
+              <TypeText>{pokemonType.type.name}</TypeText>
+            </PokemonTypesColor>
                 )}
             </PokemonTypesDiv>
       </MainDiv>
