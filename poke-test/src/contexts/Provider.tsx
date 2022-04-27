@@ -10,42 +10,6 @@ interface Sprites {
   front_default: string,
 }
 
-const pokemonsInitialState = [{
-  abilities: [],
-  base_experience: 0,
-  forms: [],
-  game_indices: [],
-  height: 0,
-  held_items: [],
-  id: 1,
-  is_default: true,
-  location_area_encounters: "",
-  moves: [],
-  name: "",
-  order: 0,
-  past_types: [],
-  species: {},
-  sprites: {
-    front_default: '',
-    other: {
-      home: {
-        front_default: '',
-      }
-    }
-  },
-  stats: [],
-  types: [
-    {
-      slot: 0,
-      type: {
-        name: '',
-        url: '',
-      },
-    }
-  ],
-  weight: 0,  
-}];
-
 export const PokemonProvider = ({ children }: PokemonContextProps) => {
   const [offSetPage, setOffSetPage] = useState(0);
   const [pokemons, setPokemons] = useState<ReturnedFromAPI[]>([]);
@@ -69,8 +33,10 @@ export const PokemonProvider = ({ children }: PokemonContextProps) => {
     const takeInitialPokemons = async () => setPokemons([...pokemons,
       ...await fetchPokemonsForHomePage(offSetPage)
     ]);
-    takeInitialPokemons();
-    setIsLoaded(true);
+    setTimeout(() => {
+      takeInitialPokemons();
+      setIsLoaded(true);
+    }, 500)
   }, [offSetPage]);
 
   return( 

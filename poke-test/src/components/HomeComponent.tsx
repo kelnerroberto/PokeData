@@ -14,7 +14,7 @@ export const HomeComponent: React.FC = () => {
 
   const handleCardClickToNavigate = (pokemonName: string) => {
     navigate(`/pokemon/${pokemonName}`);
-  }
+  };
 
   const takeTypeToChangeBackGround = (firstType: any) => {
     const bgUrl = backGroundImage(firstType);
@@ -36,7 +36,7 @@ export const HomeComponent: React.FC = () => {
 
   useEffect(() => {
     setOffSetPage(totalPages);
-  }, [totalPages])
+  }, [totalPages]);
 
   return (
     isLoaded ? 
