@@ -35,6 +35,6 @@ Lá você vai encontrar, além do nome e do tipo do pokémon:
 
 <strong>Legal, não?!</strong> Além de conferir o nome, a imagem, e o(s) tipo(s) do pokémon, você consegue verificar também o quão forte e parrudo ele é.
 
-Espero que tenha gostado desse pequeno tutorial e espero vê-lo em breve, treinador! *E cuidado com a equipe rocket*
+Espero que tenha gostado desse pequeno tutorial e espero vê-lo em breve, treinador! *E cuidado com a equipe rocket*.
 Até mais!
 🚀
