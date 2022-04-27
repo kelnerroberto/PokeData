@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import { ReturnedFromAPI } from "../API/fetchFunctions/MainFetch";
 
 const initialState = {
   pokemons: [{
@@ -34,5 +35,13 @@ const initialState = {
  isLoaded: false,
  offSetPage: 0,
 };
+
+export interface Value {
+  pokemons: ReturnedFromAPI[];
+  isLoaded: boolean;
+  offSetPage: number;
+  setOffSetPage: React.Dispatch<React.SetStateAction<number>>;
+  setPokemons: React.Dispatch<React.SetStateAction<ReturnedFromAPI[]>>;
+}
 
 export const AppContext = createContext(initialState);

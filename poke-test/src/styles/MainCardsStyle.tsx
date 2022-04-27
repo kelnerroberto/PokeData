@@ -50,6 +50,6 @@ export const TypeText = styled.span`
   font-size: 1rem;
 `;
 
-export const BodyHomeStyle = styled.body`
+export const BodyHomeStyle = styled.div`
   background-image: linear-gradient(0deg, rgba(166,166,166,1) 0%, rgb(230, 230, 230) 29%);
 `;
