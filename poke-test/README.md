@@ -8,7 +8,13 @@ Bom, para facilitar sua jornada, vou deixar aqui alguns links para você acessar
 
 Primeiramente, ao rodar no seu terminal o comando `yarn start`, você possivelmente foi direcionado ao [localhost:3000](http://localhost:3000/) . 
 
-Bom, essa é a nossa homepage. Você pode facilmente acessar os detalhes de um pokémon tanto clicando no card desse pokémon quanto pesquisando na barra de pesquisa no cabeçalho.
+Bom, essa é a nossa homepage.
+
+Ela mostrará os cards de 10 pokémons! 😲 Mas calma, não é só isso.
+
+Se você rolar até o final da página, automáticamente irá carregar mais 10 pokémons para você olhar, e assim por diante. É uma quantidade quase infinita de pokémons! Isso não é emocionante? 🥲
+
+Além disso, você pode facilmente acessar os detalhes de um pokémon tanto clicando nesses cards quanto pesquisando na barra de pesquisa no cabeçalho.
 
 <img src="./Images/HomePage.jpeg" alt="My Home" width='80%' />
 
