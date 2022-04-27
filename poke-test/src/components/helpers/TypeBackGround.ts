@@ -1,5 +1,5 @@
 const grass = '#88cc00';
-const fire = '#ed1d1d';
+const fire = '#e9241d';
 const electric = '#ffcc00';
 const water = '#4582bf';
 const psychic = '#946f00';
@@ -7,7 +7,7 @@ const rock = '#bebbbb';
 const fighting = '#8e5757';
 const ghost = '#7905c7';
 const ground = '#854200';
-const poison = '#660066';
+const poison = '#8B008B';
 const steel = '#bfbfab';
 const bug = '#0c730c';
 const fairy = '#ff99cc';

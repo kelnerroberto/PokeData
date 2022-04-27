@@ -8,7 +8,7 @@ import { StatsAndIcons } from './helpers/IconsOfStats';
 
 import { MainDiv, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
-import { AbilitiesAndMovesDiv, AbilitiesDiv, CardSection, DetailedMainDiv, DetailedSection, DetailsPokemonWord, DivList, MovesDiv, PhysicalCharacteristics, PokemonDetailedImage, PokemonDetailedTitle, SectionsDivs } from '../styles/DetailedStyle';
+import { AbilitiesAndMovesDiv, AbilitiesDiv, CardSection, DetailedMainDiv, DetailedSection, DetailsPokemonWord, DivList, MovesDiv, PhysicalCharacteristics, PokemonDetailedImage, PokemonDetailedTitle, PokemonDetailedTypesColor, PokemonDetailedTypesDiv, PokemonImageDiv, SectionsDivs } from '../styles/DetailedStyle';
 import { ColoredTypeBackGround } from './helpers/TypeBackGround';
 import { UpperCaseFirstLetter } from './helpers/UpperCaseFirstLetter';
 
@@ -44,16 +44,19 @@ export const DetailsComponent: React.FC = () => {
     :
     <DetailedMainDiv>
       <CardSection>
-      <PokemonDetailedTitle>{`#${pokemon.id}: ${UpperCaseFirstLetter(pokemon.name)}`}</PokemonDetailedTitle>
-      <MainDiv>
+        <PokemonDetailedTitle>{`#${pokemon.id}: ${UpperCaseFirstLetter(pokemon.name)}`}</PokemonDetailedTitle>
+        <MainDiv>
+          <PokemonImageDiv>
             <PokemonDetailedImage src={pokemon.sprites.other.home.front_default} alt={`That's ${pokemon.name} overthere`} />
-            <PokemonTypesDiv>{
-            pokemon.types.map((pokemonType) => 
-            <PokemonTypesColor style={{ backgroundColor: ColoredTypeBackGround(pokemonType.type.name)}}>
+          </PokemonImageDiv>
+          <PokemonDetailedTypesDiv>{
+            pokemon.types.map(
+              (pokemonType) =>
+            <PokemonDetailedTypesColor style={{ backgroundColor: ColoredTypeBackGround(pokemonType.type.name)}}>
               <TypeText>{pokemonType.type.name}</TypeText>
-            </PokemonTypesColor>
-                )}
-            </PokemonTypesDiv>
+            </PokemonDetailedTypesColor>
+            )}
+          </PokemonDetailedTypesDiv>
       </MainDiv>
       </CardSection>
       <DetailedSection>
