@@ -39,7 +39,7 @@ export const PokemonTypesDiv = styled.div`
 `;
 
 export const PokemonTypesColor = styled.div`
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   &:hover {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -48,6 +48,7 @@ export const PokemonTypesColor = styled.div`
 
 export const TypeText = styled.span`
   font-size: 1rem;
+  font-weight: 600;
 `;
 
 export const BodyHomeStyle = styled.div`

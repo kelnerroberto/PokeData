@@ -5,7 +5,8 @@ export const SearchContainer = styled.div`
   height: 5rem;
   justify-content: space-between;
   align-content: center;
-  background-image: #0A285F;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   align-items: center;
   flex-wrap: wrap;
   transition: all 0.4s;
@@ -39,7 +40,7 @@ export const SearchButton = styled.button`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: inline;
-  background-color: #FFDE56;
+  background-color: #D0D0D0;
   padding: 0.7rem;
   border-radius: 5px;
 `;
