@@ -1,5 +1,12 @@
 export const InitialDetailedPokemonState = {
-  abilities: [],
+  abilities: [{
+    ability: {
+    name: "",
+    url: ""
+    },
+    is_hidden: false,
+    slot: 0,
+    }],
   base_experience: 0,
   forms: [],
   game_indices: [],
@@ -8,7 +15,15 @@ export const InitialDetailedPokemonState = {
   id: 1,
   is_default: true,
   location_area_encounters: "",
-  moves: [],
+  moves: [
+    {
+      move: {
+        name: "",
+        url: ""
+      },
+      version_group_details: [],
+    }
+  ],
   name: "",
   order: 0,
   past_types: [],

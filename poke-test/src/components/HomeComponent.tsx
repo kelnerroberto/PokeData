@@ -4,11 +4,11 @@ import { AppContext, Value } from '../contexts/AppContext';
 import { Card, MainDiv, PokemonImage, PokemonTitle, PokemonTypesColor, PokemonTypesDiv, TypeText } from '../styles/MainCardsStyle';
 import { backGroundImage } from './helpers/BackGroundType';
 import { ColoredTypeBackGround } from './helpers/TypeBackGround';
+import { UpperCaseFirstLetter } from './helpers/UpperCaseFirstLetter';
 
 export const HomeComponent: React.FC = () => {
-  const { pokemons, setPokemons, isLoaded, offSetPage, setOffSetPage } = useContext(AppContext) as Value;
+  const { pokemons, isLoaded, setOffSetPage } = useContext(AppContext) as Value;
   const [totalPages, setTotalPages] = useState(0);
-  const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export const HomeComponent: React.FC = () => {
         style={{ background: takeTypeToChangeBackGround(each.types[0].type.name)}}
       >
         <PokemonTitle>
-          {each.name.charAt(0).toUpperCase() + each.name.slice(1)}
+          {UpperCaseFirstLetter(each.name)}
         </PokemonTitle>
         <PokemonImage src={each.sprites.front_default} alt={`That's ${each.name} overthere`} />
         <PokemonTypesDiv>{each.types

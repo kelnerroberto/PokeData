@@ -32,6 +32,11 @@ export interface Abilities {
   slot: number,
 }
 
+export interface Moves {
+  move: PokeNameAndUrl,
+  version_group_details: Array<object>,
+}
+
 export interface ReturnedFromAPI {
   abilities: Array<Abilities>,
   base_experience: number,
@@ -42,7 +47,7 @@ export interface ReturnedFromAPI {
   id: number,
   is_default: boolean,
   location_area_encounters: string,
-  moves: Array<object>,
+  moves: Array<Moves>,
   name: string,
   order: number,
   past_types: Array<object>,
