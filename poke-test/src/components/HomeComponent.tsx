@@ -7,9 +7,8 @@ import { ColoredTypeBackGround } from './helpers/TypeBackGround';
 import { UpperCaseFirstLetter } from './helpers/UpperCaseFirstLetter';
 
 export const HomeComponent: React.FC = () => {
-  const { pokemons, setPokemons, isLoaded, offSetPage, setOffSetPage } = useContext(AppContext) as Value;
+  const { pokemons, isLoaded, setOffSetPage } = useContext(AppContext) as Value;
   const [totalPages, setTotalPages] = useState(0);
-  const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
 

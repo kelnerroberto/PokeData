@@ -15,7 +15,15 @@ export const InitialDetailedPokemonState = {
   id: 1,
   is_default: true,
   location_area_encounters: "",
-  moves: [],
+  moves: [
+    {
+      move: {
+        name: "",
+        url: ""
+      },
+      version_group_details: [],
+    }
+  ],
   name: "",
   order: 0,
   past_types: [],
