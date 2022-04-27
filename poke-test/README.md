@@ -18,9 +18,9 @@ Você consegue também acessar a página de detalhes diretamente pela URL (lembr
 
 Para demonstrar isso aqui vão 3 links que te levarão para a página de detalhes desses pokémons:
 
- * [Bulbasaur](http://localhost:3000/pokemon/bulbasaur)
- * [Charmander](http://localhost:3000/pokemon/charmander)
- * [Squirtle](http://localhost:3000/pokemon/squirtle)
+ * [Bulbasaur](http://localhost:3000/pokemon/bulbasaur) 🌿
+ * [Charmander](http://localhost:3000/pokemon/charmander) 🔥
+ * [Squirtle](http://localhost:3000/pokemon/squirtle) 💧
 
 E ai, qual dos 3 você mais gostou? 😆
 
