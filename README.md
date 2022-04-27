@@ -10,6 +10,12 @@ Para iniciar o projeto e começar a sua jornada basta clonar o repositório (rec
 
 Por padrão, o projeto será aberto em seu browser na porta [http://localhost:3000](http://localhost:3000). Caso essa porta esteja em uso, o yarn irá te alertar, perguntando se você não gostaria de rodar o projeto em outra porta. Para isso, basta clicar `y` no terminal que ele irá abrir uma nova porta para rodar este projeto.
 
+## Instruções sobre rotas:
+
+# O projeto possuí 2 rotas, sendo acessível por '/' (home) e '/pokemon/:nome-do-pokemon' (página de detalhes do pokémon), onde nome-do-pokemon pode ser qualquer nome de pokémon válido.
+
+# Atenção: Não existe a rota '/:nome-do-pokemon', para acessar os detalhes do pokémon deve ser acessado '/pokemon/:nome', por exemplo: http://localhost:3000/pokemon/pikachu
+
 Mais informações você encontrará no README da pasta `poke-test`.
 
 Espero que goste e qualquer dúvida estarei a disposição através do email:
