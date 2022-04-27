@@ -16,7 +16,7 @@ Por padrão, o projeto será aberto em seu browser na porta [http://localhost:30
 
 ### 2- Atenção: Não existe a rota '/:nome-do-pokemon', para acessar os detalhes do pokémon deve ser acessado '/pokemon/:nome', por exemplo: http://localhost:3000/pokemon/pikachu
 
-______________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________
 
 Mais informações você encontrará no README da pasta `poke-test`.
 
