@@ -2,7 +2,7 @@
 
 ## Olá, seja bem vindo! :smile:
 
-Este é o repositório utilizado para a realização do teste da empresa Sd Conecta.
+Este é o repositório utilizado para a realização do teste da empresa Saúde Digital Ecossistema.
 
 Para iniciar o projeto e começar a sua jornada basta clonar o repositório (recomenda-se utilizar uma chave SSH), **entrar na pasta `poke-test`**, e em seu terminal rodar o comando `yarn` e em seguida `yarn start`.
 
